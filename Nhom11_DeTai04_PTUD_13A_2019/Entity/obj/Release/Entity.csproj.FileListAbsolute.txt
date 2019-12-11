@@ -1,0 +1,12 @@
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Release\Entity.dll
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Release\Entity.pdb
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Release\LinqToExcel.dll
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Release\Remotion.Data.Linq.dll
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Release\Remotion.dll
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Release\Remotion.Interfaces.dll
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Release\LinqToExcel.xml
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Release\Entity.csprojAssemblyReference.cache
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Release\Entity.csproj.ResolveComReference.cache
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Release\Entity.csproj.CopyComplete
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Release\Entity.dll
+C:\Users\NOPE\Desktop\DocumentDoAn1\code\code8F\PTUD-master\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Release\Entity.pdb
