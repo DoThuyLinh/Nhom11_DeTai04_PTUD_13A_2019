@@ -12,7 +12,7 @@ namespace DataAccess.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -114,8 +114,8 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC-TNTQ\\TNTQ;Initial Catalog=QLLaoDong;Persist Security Info=True;Use" +
-            "r ID=sa;Password=sapassword")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-U14DSOG\\SA;Initial Catalog=QLyLaoDong;Persist Security Info=T" +
+            "rue;User ID=sa;Password=tu1toi9A")]
         public string QLLaoDongConnectionString5 {
             get {
                 return ((string)(this["QLLaoDongConnectionString5"]));

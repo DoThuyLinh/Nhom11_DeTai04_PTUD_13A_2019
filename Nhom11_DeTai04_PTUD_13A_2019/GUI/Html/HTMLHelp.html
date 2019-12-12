@@ -6,19 +6,26 @@
     <title>HƯỚNG DẪN SỬ DỤNG CHƯƠNG TRÌNH QUẢN LÝ LAO ĐỘNG</title>
     <link rel="shortcut icon" type="image/x-icon" href="../Resources/Untitled-3.jpg">
     <style type="text/css">
-        .image{
-            width:300px;
+        .image {
+            width: 300px;
             height: 200px;
-            margin-left:550px;
+            margin-left: 550px;
         }
-        .nameDoAn{
-            margin-top:-90px;
-            text-align:center;
+
+        .nameDoAn {
+            margin-top: -90px;
+            text-align: center;
         }
-        .imageLogin{
+
+        .imageLogin {
             margin-left: 200px;
             width: 900px;
             height: 500px;
+        }
+
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
         }
     </style>
 </head>
@@ -39,32 +46,134 @@
         <div class="body">
             <div class="gioithieu">
                 <p style="font-size:25px; text-indent:30px"><b>1. GIỚI THIỆU ỨNG DỤNG</b></p>
+                <div style="font-size:23px; margin-left:70px; margin-right:50px">
+                    <p>
+                        Phần mềm Quản lý lao động công ty xây dựng Duy Tân giúp nhân viên phòng quản lý dự án
+                        thực hiện các công việc một cách nhanh chóng và dễ dàng.
+                    </p>
+                    <p>
+                        Phần mềm giúp nhân viên phòng quản lý dự án thực hiện các công việc liên quan tới dự án,
+                        công việc trong các dự án đó, hay quản lý các hợp đồng đã kí trong dự án,
+                        quản lý các nhân viên làm việc của dự án. Giúp cho các thông tin mà nhân viên quản lý
+                        được chính xác và dễ dàng hơn. Bên cạnh đó phần mềm giúp nhân viên có thể thêm mới, chỉnh sửa,
+                        tìm kiếm theo yêu cầu, xuất dữ liệu đối với các dự án, công việc, hợp đồng hay nhân viên.
+                        Đặc biệt phần mềm còn hỗ trợ nhân viên thống kê một cách chính xác số lượng các dữ liệu cần
+                        thiết theo yêu cầu.
+                    </p>
+                </div>
             </div>
             <div class="cauhinh">
                 <p style="font-size:25px; text-indent:30px"><b>2. CẤU HÌNH PHẦN CỨNG - PHẦN MỀM</b></p>
+                <div style="font-size:23px; margin-left:70px; margin-right:50px">
+                    <p style="font-size:23px; text-indent:0px">2.1 Cấu hình phần cứng</p>
+                    <table style="width:70%">
+                        <tr>
+                            <td>CPU</td>
+                            <td>RAM</td>
+                            <td>HDD</td>
+                            <td>Architecture</td>
+                        </tr>
+                        <tr>
+                            <td>Intel Core i5, 2.3 GHz</td>
+                            <td>8 GB</td>
+                            <td>360 GB</td>
+                            <td>64 bit</td>
+                        </tr>
+                    </table>
+
+                    <p style="font-size:23px; text-indent:0px">2.2 Cấu hình phần mềm</p>
+                    <table style="width:70%">
+                        <tr>
+                            <td>Tên phần mềm</td>
+                            <td>Phiên bản</td>
+                            <td>Loại</td>
+                        </tr>
+                        <tr>
+                            <td>Visual Studio 2019</td>
+                            <td>16.3.7</td>
+                            <td>IDE cho C#</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft SQL Server 2012</td>
+                            <td>11.0.2100.60</td>
+                            <td>Hệ quản trị cơ sở dữ liệu</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Windows 10</td>
+                            <td>10</td>
+                            <td>Hệ điều hành</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div class="chucnang">
                 <p style="font-size:25px; text-indent:30px"><b>3. CÁC CHỨC NĂNG CHÍNH</b></p>
                 <p style="font-size:23px; text-indent:30px"><b>3.1 Chức năng của User</b></p>
                 <div class="dangnhap">
                     <p style="font-size:23px; text-indent:50px">a. Chức năng đăng nhập</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Nhập tên đăng nhập: duan.xddt@gmail.com</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2:Nhập mật khẩu để đăng nhập.Lưu ý mật khẩu không được nhỏ hơn 6 kí tự</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Nhấn chọn Đăng nhập</p>
                     <img src="..\..\..\Document\frmLogin.gif" class="imageLogin" />
                 </div>
                 <div class="themDuAn">
-                    <p style="font-size:23px; text-indent:50px">b. Chức năng thêm dự án</p>
+                    <p style="font-size:23px; text-indent:50px">b. Chức năng thêm</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Chọn chức năng thêm ở giao diện Quản lý</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2:Nhập đầy đủ các thông tin của dự án</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Bấm Chọn để lưu dự án hoặc Đóng để huỷ lưu</p>
                     <img src="..\..\..\Document\frmThemDuAn.gif" class="imageLogin" />
                 </div>
                 <div class="suaDuAn">
-                    <p style="font-size:23px; text-indent:50px">c. Chức năng sửa thông tin dự án</p>
-                    <!--<img src="..\..\..\Document\frmThemDuAn.gif" class="imageLogin" />-->
+                    <p style="font-size:23px; text-indent:50px">c. Chức năng sửa - cập nhật thông tin</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Chọn dữ liệu cần sửa trong danh sách ở giao diện Quản lý tương ứng</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2:Nhấn chọn nút Sửa</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Chỉnh sửa dữ liệu hợp lý</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 4:Nhấn Chọn để lưu hoặc Đóng để huỷ lưu</p>
+                    <img src="..\..\..\Document\suaDuAn.gif" class="imageLogin" />
                 </div>
                 <div class="timKiemDuAn">
-                    <p style="font-size:23px; text-indent:50px">d. Chức năng tìm kiếm thông tin dự án</p>
+                    <p style="font-size:23px; text-indent:50px">d. Chức năng tìm kiếm thông tin</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Nhấn nút Tìm kiếm trong giao diện Quản lý</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2:Lựa chọn tìm kiếm theo dữ liệu cần nhập</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Nhập dữ liệu cần tìm</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 4:Nhấn Chọn để thực hiện tìm kiếm hoặc Đóng để huỷ</p>
                     <img src="..\..\..\Document\frmTimKiemDuAn.gif" class="imageLogin" />
                 </div>
                 <div class="xuatDuAn">
-                    <p style="font-size:23px; text-indent:50px">e. Chức năng xuất các dự án</p>
-                    <!--<img src="..\..\..\Document\frmTimKiemDuAn.gif" class="imageLogin" />-->
+                    <p style="font-size:23px; text-indent:50px">e. Chức năng xuất dữ liệu</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Nhấn chọn nút xuất trong giao diện Quản lý tương ứng</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2: Nhấn "Yes" để xuất dữ liệu hoặc "No" để huỷ</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Lưu file dữ liệu hoặc đóng</p>
+                    <img src="..\..\..\Document\xuatDuAn.gif" class="imageLogin" />
+                </div>
+                <div class="xuatDuAn">
+                    <p style="font-size:23px; text-indent:50px">f. Chức năng phân công công việc</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Nhấn chọn nút Phân công trong giao diện Quản lý nhân viên</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2:Chọn công việc cần phân công</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Chọn các nhân viên để phân công vào công việc</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 4:Nhấn nút Phân công để phân công các nhân viên</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 5:Nhấn nút Xuất file để xuất dữ liệu của file phân công</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 6:Lưu file phân công hoặc đóng</p>
+                    <img src="..\..\..\Document\phanCong.gif" class="imageLogin" />
+                </div>
+                <div class="xuatDuAn">
+                    <p style="font-size:23px; text-indent:50px">g. Chức năng tính lương nhân viên</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Nhấn chọn nút Tính lương trong giao diện Quản lý nhân viên</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2:Nhấn nút Chọn file để chọn file chấm công(Lưu ý file chấm công phải xoá dòng đầu tiên trước khi chọn file trong chương trình)</p>
+                    <img src="..\..\..\Document\chonFileChamCong.gif" class="imageLogin" />
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Chọn "Yes" để chọn file chấm công hoặc "No" để huỷ</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 4:Chọn file để tính lương</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 5:Nhấn chọn "Open"</p>
+                    <img src="..\..\..\Document\tinhluong.gif" class="imageLogin" />
+                </div>
+                <div class="xuatDuAn">
+                    <p style="font-size:23px; text-indent:50px">h. Chức năng thống kê</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 1:Chọn chức năng Thống kê ở thanh menu</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 2:Chọn điều kiện để thống kê</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 3:Chọn dữ liệu để thống kê tương ứng</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 4:Nhấn nút Thống kê để thống kê dữ liệu</p>
+                    <p style="font-size:22px; text-indent:90px">Bước 5:Chọn nút Export để xuất file</p>
+                    <img src="..\..\..\Document\thongKe.gif" class="imageLogin" />
                 </div>
             </div>
         </div>

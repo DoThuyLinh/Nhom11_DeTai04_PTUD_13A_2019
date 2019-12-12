@@ -19,8 +19,8 @@ namespace GUI
         {
             InitializeComponent();
             tk = new BUSTaiKhoan();
-            frm_flashScreen frm_FlashScreen = new frm_flashScreen();
-            frm_FlashScreen.ShowDialog();
+            //frm_flashScreen frm_FlashScreen = new frm_flashScreen();
+            //frm_FlashScreen.ShowDialog();
         }
         public void setTooltip(Control control)
         {
@@ -89,6 +89,11 @@ namespace GUI
         private void timerClose_Tick(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"..\..\Html\HTMLHelp.html");
         }
     }
 }

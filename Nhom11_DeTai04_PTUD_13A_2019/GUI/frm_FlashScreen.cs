@@ -13,6 +13,7 @@ namespace GUI
     public partial class frm_flashScreen : Form
     {
         int a = 0;
+        
         public frm_flashScreen()
         {
             InitializeComponent();
@@ -27,6 +28,12 @@ namespace GUI
             }
             a += 10;
             if (a == 3000)
+            {
+                frm_login frm_Login = new frm_login(); 
+                frm_Login.ShowDialog();
+                
+            }
+            if(a == 3000)
             {
                 timerShow.Stop();
                 this.Close();

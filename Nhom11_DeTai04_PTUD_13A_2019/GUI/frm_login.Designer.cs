@@ -42,6 +42,7 @@
             this.picLogoName = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timerClose = new System.Windows.Forms.Timer(this.components);
+            this.btnHelp = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pic_thoat)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoPass)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnHelp);
             this.panel1.Controls.Add(this.lblThongBao);
             this.panel1.Controls.Add(this.txtMatKhau);
             this.panel1.Controls.Add(this.txtTenDangNhap);
@@ -83,7 +85,7 @@
             this.lblThongBao.AutoSize = true;
             this.lblThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThongBao.ForeColor = System.Drawing.Color.Red;
-            this.lblThongBao.Location = new System.Drawing.Point(17, 366);
+            this.lblThongBao.Location = new System.Drawing.Point(16, 322);
             this.lblThongBao.Name = "lblThongBao";
             this.lblThongBao.Size = new System.Drawing.Size(0, 16);
             this.lblThongBao.TabIndex = 5;
@@ -94,7 +96,7 @@
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtMatKhau.Location = new System.Drawing.Point(65, 313);
+            this.txtMatKhau.Location = new System.Drawing.Point(69, 277);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(220, 17);
@@ -109,7 +111,7 @@
             this.txtTenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(65, 241);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(69, 205);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(220, 17);
             this.txtTenDangNhap.TabIndex = 4;
@@ -139,7 +141,7 @@
             this.btnDangNhap.IconVisible = true;
             this.btnDangNhap.IconZoom = 90D;
             this.btnDangNhap.IsTab = false;
-            this.btnDangNhap.Location = new System.Drawing.Point(86, 398);
+            this.btnDangNhap.Location = new System.Drawing.Point(81, 350);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(117)))), ((int)(((byte)(124)))));
             this.btnDangNhap.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(99)))), ((int)(((byte)(109)))));
@@ -156,7 +158,7 @@
             // panelMatKhau
             // 
             this.panelMatKhau.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panelMatKhau.Location = new System.Drawing.Point(65, 337);
+            this.panelMatKhau.Location = new System.Drawing.Point(69, 301);
             this.panelMatKhau.Name = "panelMatKhau";
             this.panelMatKhau.Size = new System.Drawing.Size(220, 1);
             this.panelMatKhau.TabIndex = 2;
@@ -164,7 +166,7 @@
             // panelTenDangNhap
             // 
             this.panelTenDangNhap.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panelTenDangNhap.Location = new System.Drawing.Point(65, 265);
+            this.panelTenDangNhap.Location = new System.Drawing.Point(69, 229);
             this.panelTenDangNhap.Name = "panelTenDangNhap";
             this.panelTenDangNhap.Size = new System.Drawing.Size(220, 1);
             this.panelTenDangNhap.TabIndex = 2;
@@ -172,7 +174,7 @@
             // picLogoPass
             // 
             this.picLogoPass.Image = global::GUI.Properties.Resources.lock_2_26px;
-            this.picLogoPass.Location = new System.Drawing.Point(34, 313);
+            this.picLogoPass.Location = new System.Drawing.Point(38, 277);
             this.picLogoPass.Name = "picLogoPass";
             this.picLogoPass.Size = new System.Drawing.Size(25, 25);
             this.picLogoPass.TabIndex = 1;
@@ -181,7 +183,7 @@
             // picLogoName
             // 
             this.picLogoName.Image = global::GUI.Properties.Resources.user_24px;
-            this.picLogoName.Location = new System.Drawing.Point(34, 241);
+            this.picLogoName.Location = new System.Drawing.Point(38, 205);
             this.picLogoName.Name = "picLogoName";
             this.picLogoName.Size = new System.Drawing.Size(25, 25);
             this.picLogoName.TabIndex = 1;
@@ -202,6 +204,41 @@
             // 
             this.timerClose.Interval = 5000;
             this.timerClose.Tick += new System.EventHandler(this.timerClose_Tick);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHelp.BorderRadius = 0;
+            this.btnHelp.ButtonText = "Help";
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.DisabledColor = System.Drawing.Color.Gray;
+            this.btnHelp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnHelp.Iconimage = null;
+            this.btnHelp.Iconimage_right = null;
+            this.btnHelp.Iconimage_right_Selected = null;
+            this.btnHelp.Iconimage_Selected = null;
+            this.btnHelp.IconMarginLeft = 0;
+            this.btnHelp.IconMarginRight = 0;
+            this.btnHelp.IconRightVisible = true;
+            this.btnHelp.IconRightZoom = 0D;
+            this.btnHelp.IconVisible = true;
+            this.btnHelp.IconZoom = 50D;
+            this.btnHelp.IsTab = false;
+            this.btnHelp.Location = new System.Drawing.Point(218, 421);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.btnHelp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(99)))), ((int)(((byte)(109)))));
+            this.btnHelp.OnHoverTextColor = System.Drawing.Color.Transparent;
+            this.btnHelp.selected = false;
+            this.btnHelp.Size = new System.Drawing.Size(80, 30);
+            this.btnHelp.TabIndex = 14;
+            this.btnHelp.Text = "Help";
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHelp.Textcolor = System.Drawing.Color.Black;
+            this.btnHelp.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // frm_login
             // 
@@ -241,6 +278,7 @@
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Timer timerClose;
         private System.Windows.Forms.Label lblThongBao;
+        private Bunifu.Framework.UI.BunifuFlatButton btnHelp;
     }
 }
 
