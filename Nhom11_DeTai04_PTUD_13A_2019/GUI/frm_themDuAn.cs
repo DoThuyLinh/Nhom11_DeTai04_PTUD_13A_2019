@@ -79,21 +79,21 @@ namespace GUI
 
             if (!CheckTenDuAn())
             {
-                txtTenDuAn.Focus();
+                txtSoNha1.Focus();
                 
             }
             else
             {
-                errorProvider1.SetError(txtTenDuAn, "");
+                errorProvider1.SetError(txtSoNha1, "");
             }
         }
 
         bool CheckTenDuAn()
         {
-            if (txtTenDuAn.Text.Trim().Equals(""))
+            if (txtSoNha1.Text.Trim().Equals(""))
             {
                
-                errorProvider1.SetError(txtTenDuAn, "Khong de trong ten du an");
+                errorProvider1.SetError(txtSoNha1, "Khong de trong ten du an");
                 return false;
             }
             return true;
@@ -153,21 +153,21 @@ namespace GUI
         {
             if (!CheckSoNha())
             {
-                txtSoNha.Focus();
+                txtTenDuAn.Focus();
            
             }
             else
             {
-                errorProvider1.SetError(txtSoNha, "");
+                errorProvider1.SetError(txtTenDuAn, "");
             }
         }
 
         bool CheckSoNha()
         {
-            if (txtSoNha.Text.Trim().Equals(""))
+            if (txtTenDuAn.Text.Trim().Equals(""))
             {
                
-                errorProvider1.SetError(txtSoNha, "Khong de trong so nha");
+                errorProvider1.SetError(txtTenDuAn, "Khong de trong so nha");
                 return false;
             }
             return true;
@@ -187,17 +187,17 @@ namespace GUI
 
             if(soLoi > 0)
             {
-                txtTenDuAn.Focus();
+                txtSoNha1.Focus();
                 MessageBox.Show("Thong Tin Khong Hop Le");
                 return;
             }
 
-            eDuAn.TenDuAn = txtTenDuAn.Text;
+            eDuAn.TenDuAn = txtSoNha1.Text;
             eDuAn.NgayBatDau = dtmNgayBatDau.Value;
             eDuAn.NgayKetThuc = dtmNgayKetThuc.Value;
             eDuAn.TrangThai = cboTrangThai.Text;
             eDuAn.TienDo = (int)nudTienDoHoanThanh.Value;
-            eDuAn.DiaChi = new eDiaChi(txtSoNha.Text, cboPhuongXa.Text, cboQuanHuyen.Text, cboThanhPho.Text);
+            eDuAn.DiaChi = new eDiaChi(txtTenDuAn.Text, cboPhuongXa.Text, cboQuanHuyen.Text, cboThanhPho.Text);
 
             busDuAn.AddItem(eDuAn);
 

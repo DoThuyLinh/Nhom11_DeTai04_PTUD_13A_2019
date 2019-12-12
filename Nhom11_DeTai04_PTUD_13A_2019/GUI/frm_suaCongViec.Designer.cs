@@ -230,7 +230,7 @@
             this.nudTienDoCongViec.Name = "nudTienDoCongViec";
             this.nudTienDoCongViec.Size = new System.Drawing.Size(376, 24);
             this.nudTienDoCongViec.TabIndex = 24;
-            this.nudTienDoCongViec.Leave += new System.EventHandler(this.nudTienDoCongViec_Leave);
+           
             // 
             // cboTrangThai
             // 

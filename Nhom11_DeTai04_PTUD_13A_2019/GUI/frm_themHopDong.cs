@@ -102,10 +102,10 @@ namespace GUI
         bool CheckNgayKyKet()
         {
             eDuAn duAn = busDuAn.GetItemByCondition(t => t.MaDuAn.Equals(cboDuAn.SelectedValue.ToString()));
-            if (dtmNgayKyKet.Value < duAn.NgayBatDau || dtmNgayKyKet.Value > DateTime.Now)
+            if (dtmNgayKyKet.Value < duAn.NgayBatDau || dtmNgayKyKet.Value > duAn.NgayKetThuc || dtmNgayKyKet.Value > DateTime.Now )
             {
                
-                errorProvider1.SetError(dtmNgayKyKet, "ngay Ky Ket > ngay Du An bat dau. Ngay Du An:" + duAn.NgayBatDau.ToShortDateString() + "\n" + "Ngay ky ket <= ngay hien tai");
+                errorProvider1.SetError(dtmNgayKyKet, "ngay Ky Ket > ngay Du An bat dau. Ngay Du An:" + duAn.NgayBatDau.ToLongDateString() + " - "+duAn.NgayKetThuc.ToLongDateString());
                 return false;
             }
             return true;
@@ -115,7 +115,7 @@ namespace GUI
         {
             if (!CheckNgayHetHan())
             {
-                dtmNgayKyKet.Focus();
+                dtmNgayHetHan.Focus();
                
             }
             else
@@ -126,7 +126,7 @@ namespace GUI
 
         bool CheckNgayHetHan()
         {
-            if (dtmNgayHetHan.Value < dtmNgayKyKet.Value)
+            if (dtmNgayHetHan.Value <= dtmNgayKyKet.Value)
             {
                
                 errorProvider1.SetError(dtmNgayHetHan, "ngay Het Han > ngay Ky Ket");
@@ -177,7 +177,9 @@ namespace GUI
                 MessageBox.Show("Thong Tin Khong Hop Le");
                 return;
             }
-            eHopDong.duAn.MaDuAn = cboDuAn.SelectedValue.ToString();
+
+            eDuAn duAn = busDuAn.GetItemByCondition(t => t.MaDuAn.Equals(cboDuAn.SelectedValue.ToString()));
+            eHopDong.duAn = new eDuAn(duAn.MaDuAn, duAn.TenDuAn, null, duAn.NgayBatDau, duAn.NgayKetThuc, duAn.TienDo, duAn.TrangThai);
             eHopDong.tenHopDong = txtTenHopDong.Text;
             eHopDong.ngayKyKet = dtmNgayKyKet.Value;
             eHopDong.ngayHetHan = dtmNgayHetHan.Value;

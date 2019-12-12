@@ -51,5 +51,10 @@ namespace Business
         {
             dalHopDong.Update(entity);
         }
+
+        public eHopDong GetItemByCondiditon(Func<eHopDong, bool> lambda)
+        {
+            return dalHopDong.GetItemByCondiditon(lambda);
+        }
     }
 }

@@ -90,14 +90,9 @@ namespace GUI
             {
 
                 string maHopDong = dgv_hopDong.SelectedCells[0].Value.ToString();
-                string maDuAn = dgv_hopDong.SelectedCells[1].Value.ToString();
-                string tenHopDong = dgv_hopDong.SelectedCells[2].Value.ToString();
-                DateTime ngayKyKet = (DateTime)dgv_hopDong.SelectedCells[3].Value;
-                double giaTriHopDong = (double)dgv_hopDong.SelectedCells[4].Value;
-                DateTime ngayHetHan = (DateTime)dgv_hopDong.SelectedCells[5].Value;
-                string thongTin = dgv_hopDong.SelectedCells[6].Value.ToString();
+                eHopDong hd = _hopDong.GetItemByCondiditon(t=>t.maHopDong.Equals(maHopDong));
 
-                frm_suaHopDong suaHopDong = new frm_suaHopDong(maHopDong, maDuAn, tenHopDong, ngayKyKet, ngayHetHan, giaTriHopDong, thongTin);
+                frm_suaHopDong suaHopDong = new frm_suaHopDong(maHopDong, hd.duAn, hd.tenHopDong, hd.ngayKyKet, hd.ngayHetHan, hd.giaTriHopDong,  hd.thongTin);
 
                 suaHopDong.ShowDialog();
             }

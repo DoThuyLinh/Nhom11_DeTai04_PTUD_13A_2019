@@ -67,34 +67,7 @@ namespace GUI
             cboViTriCongViec.Text = congViec.ViTriCongViec;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            int soLoi = 0;
-
-            if (!checkTenCongViec())
-                soLoi++;
-            if (!checkNgayKetThuc())
-                soLoi++;
-            if (checkTienDoCongViec())
-                soLoi++;
-            if (soLoi > 0)
-            {
-                txtTenCongViec.Focus();
-                MessageBox.Show("Thong Tin Nhap Khong Hop Le");
-                return;
-            }
-
-            congViec.TenCongViec = txtTenCongViec.Text;
-            congViec.NgayBatDau = dtmNgayBatDau.Value;
-            congViec.NgayKetThuc = dtmNgayKetThuc.Value;
-            congViec.TrangThai = cboTrangThai.Text;
-            congViec.Tiendo = (int)nudTienDoCongViec.Value;
-            congViec.ViTriCongViec = cboViTriCongViec.Text;
-
-            busCongViec.UpdateItem(congViec);
-            this.Close();
-        }
-
+        
         private void txtTenCongViec_Leave(object sender, EventArgs e)
         {
             if (!checkTenCongViec())
@@ -127,7 +100,7 @@ namespace GUI
 
         private void dtmNgayKetThuc_Leave(object sender, EventArgs e)
         {
-            if (!checkNgayKetThuc())
+            if (!CheckNgayKetThuc())
             {
                 dtmNgayKetThuc.Focus();
 
@@ -137,40 +110,51 @@ namespace GUI
                 errorProvider1.SetError(dtmNgayKetThuc, "");
             }
         }
-
-        bool checkNgayKetThuc()
+        bool CheckNgayKetThuc()
         {
-            if (dtmNgayBatDau.Value < dtmNgayKetThuc.Value)
+            if (dtmNgayKetThuc.Value >= dtmNgayBatDau.Value)
             {
 
-                errorProvider1.SetError(dtmNgayKetThuc, "ngay ket thuc phai lon hon ngay bat dau");
-                return false;
-            }
-
-            return true;
-        }
-
-        private void nudTienDoCongViec_Leave(object sender, EventArgs e)
-        {
-            if (!checkTienDoCongViec())
-            {
-                nudTienDoCongViec.Focus();
-
+                return true;
             }
             else
             {
-                errorProvider1.SetError(nudTienDoCongViec, "");
-            }
-        }
-
-        bool checkTienDoCongViec()
-        {
-            if (nudTienDoCongViec.Value < 0 || nudTienDoCongViec.Value > 100)
-            {
-                errorProvider1.SetError(nudTienDoCongViec, "tu 0 den 100");
+                errorProvider1.SetError(dtmNgayKetThuc, "ngay ket thuc >= ngay bat dau");
                 return false;
             }
-            return true;
+
+
         }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            int soLoi = 0;
+
+            if (!checkTenCongViec())
+                soLoi++;
+            if (!CheckNgayKetThuc())
+                soLoi++;
+
+            if (soLoi > 0)
+            {
+                txtTenCongViec.Focus();
+                MessageBox.Show("Thong Tin Nhap Khong Hop Le");
+                return;
+            }
+
+            congViec.TenCongViec = txtTenCongViec.Text;
+            congViec.NgayBatDau = dtmNgayBatDau.Value;
+            congViec.NgayKetThuc = dtmNgayKetThuc.Value;
+            congViec.TrangThai = cboTrangThai.Text;
+            congViec.Tiendo = (int)nudTienDoCongViec.Value;
+            congViec.ViTriCongViec = cboViTriCongViec.Text;
+
+            busCongViec.UpdateItem(congViec);
+            this.Close();
+        }
+
+
+
+
     }
 }

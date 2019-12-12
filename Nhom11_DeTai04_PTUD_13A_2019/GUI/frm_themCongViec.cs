@@ -47,6 +47,9 @@ namespace GUI
 
             // Gan trang thai
             cboTrangThai.DataSource = new string[] { "Chưa thực hiện", "Đang thực hiện", "Hoàn thành" };
+
+            // Gan gia tri Vi Tri Cong Viec cho combobox
+            cboViTriCongViec.DataSource = new string[] { "Quản Lý", "Khảo Sát", "Thiết Kế", "Giám Sát", "Thi Công" };
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -63,7 +66,7 @@ namespace GUI
 
         private void txtTenCongViec_Leave(object sender, EventArgs e)
         {
-            if (!checkTenCongViec())
+            if (!CheckTenCongViec())
             {
                 txtTenCongViec.Focus();
                
@@ -74,7 +77,7 @@ namespace GUI
             }
         }
 
-        bool checkTenCongViec()
+        bool CheckTenCongViec()
         {
             if (txtTenCongViec.Text.Trim().Equals(""))
             {
@@ -88,7 +91,7 @@ namespace GUI
 
         private void dtmNgayKetThuc_Leave(object sender, EventArgs e)
         {
-            if (!checkNgayKetThuc())
+            if (!CheckNgayKetThuc())
             {
                 dtmNgayKetThuc.Focus();
              
@@ -99,63 +102,47 @@ namespace GUI
             }
         }
 
-        bool checkNgayKetThuc()
+        bool CheckNgayKetThuc()
         {
-            if (dtmNgayBatDau.Value < dtmNgayKetThuc.Value)
+            if ( dtmNgayKetThuc.Value >= dtmNgayBatDau.Value)
             {
-               
-                errorProvider1.SetError(dtmNgayKetThuc, "ngay ket thuc phai lon hon ngay bat dau");
-                return false;
-            }
 
-            return true;
-        }
-
-        private void nudTienDoCongViec_Leave(object sender, EventArgs e)
-        {
-            if (!checkTienDoCongViec())
-            {
-                nudTienDoCongViec.Focus();
-           
+                return true;
             }
             else
             {
-                errorProvider1.SetError(nudTienDoCongViec, "");
-            }
-        }
-
-        bool checkTienDoCongViec()
-        {
-            if (nudTienDoCongViec.Value < 0 || nudTienDoCongViec.Value > 100)
-            { 
-                errorProvider1.SetError(nudTienDoCongViec, "tu 0 den 100");
+                errorProvider1.SetError(dtmNgayKetThuc, "ngay ket thuc >= ngay bat dau");
                 return false;
             }
-            return true;
+           
+            
         }
+
+     
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             int soLoi = 0;
 
-            if (!checkTenCongViec())
+            if (!CheckTenCongViec())
                 soLoi++;
-            if (!checkNgayKetThuc())
+            if (!CheckNgayKetThuc())
                 soLoi++;
-            if (checkTienDoCongViec())
-                soLoi++;
+           
             if(soLoi > 0)
             {
                 txtTenCongViec.Focus();
                 MessageBox.Show("Thong Tin Nhap Khong Hop Le");
                 return;
             }
-            congViec.DuAn.MaDuAn = cboDuAn.SelectedValue.ToString();
+
+            eDuAn da = busDuAn.GetItemByCondition(t => t.MaDuAn.Equals(cboDuAn.SelectedValue.ToString()));
+            congViec.DuAn = new eDuAn(da.MaDuAn, da.TenDuAn, null, da.NgayBatDau, da.NgayKetThuc, da.TienDo, da.TrangThai);
             congViec.TenCongViec = txtTenCongViec.Text;
             congViec.Tiendo = (int)nudTienDoCongViec.TextAlign;
             congViec.TrangThai = cboTrangThai.Text;
-            congViec.NgayBatDau = dtmNgayBatDau.Value;
-            congViec.NgayKetThuc = dtmNgayKetThuc.Value;
+            congViec.NgayBatDau = dtmNgayKetThuc.Value;
+            congViec.NgayKetThuc = dtmNgayBatDau.Value;
             congViec.ViTriCongViec = cboViTriCongViec.Text;
             busCongViec.AddItem(congViec);
             DialogResult = DialogResult.OK;

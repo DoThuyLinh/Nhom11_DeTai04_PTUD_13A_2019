@@ -63,7 +63,7 @@ namespace DataAccess
     #endregion
 		
 		public QuanLyLaoDongDataContext() : 
-				base(global::DataAccess.Properties.Settings.Default.QLLaoDongConnectionString3, mappingSource)
+				base(global::DataAccess.Properties.Settings.Default.QLLaoDongConnectionString5, mappingSource)
 		{
 			OnCreated();
 		}
@@ -278,7 +278,7 @@ namespace DataAccess
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenDuAn", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenDuAn", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey = true)]
 		public string tenDuAn
 		{
 			get
@@ -493,7 +493,7 @@ namespace DataAccess
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soCMND", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soCMND", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey = true)]
 		public string soCMND
 		{
 			get

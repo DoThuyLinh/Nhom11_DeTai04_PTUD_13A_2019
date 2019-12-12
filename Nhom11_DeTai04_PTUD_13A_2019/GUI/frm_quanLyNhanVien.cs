@@ -136,6 +136,7 @@ namespace GUI
                     txt_email.Text = row.Cells[9].Value.ToString();
                     txt_soDienThoai.Text = row.Cells[2].Value.ToString();
                     Image image = Image.FromFile(@"..\..\Images_nhanVien\" + row.Cells[7].Value.ToString());
+                 
                     pic_nhanVien.Image = image;
                 }
             }
@@ -167,9 +168,9 @@ namespace GUI
             {
                 string maNV = dgv_nhanVien.SelectedCells[0].Value.ToString();
                 List<eNhanVien> list = _nhanVien.GetAllList();
-
                 eNhanVien nv = list.Where(t => t.manhanVien.Equals(maNV)).SingleOrDefault();
-                frm_suaNhanVien suaNhanVien = new frm_suaNhanVien(nv.manhanVien, nv.hoTen, nv.gioiTinh, nv.dienThoai, nv.email, nv.ngayVaolam, nv.namSinh, nv.soCMND, nv.soBaoHiemXH, nv.diaChi.maDiaChi, nv.diaChi.soNha, nv.diaChi.phuongXa, nv.diaChi.quanHuyen, nv.diaChi.thanhPho, nv.viTriCongViec);
+                string hinhAnh = dgv_nhanVien.SelectedRows[0].Cells[7].Value.ToString();
+                frm_suaNhanVien suaNhanVien = new frm_suaNhanVien(nv.manhanVien, nv.hoTen, nv.gioiTinh, nv.dienThoai, nv.email, nv.ngayVaolam, nv.namSinh, nv.soCMND, nv.soBaoHiemXH, nv.diaChi.maDiaChi, nv.diaChi.soNha, nv.diaChi.phuongXa, nv.diaChi.quanHuyen, nv.diaChi.thanhPho, nv.viTriCongViec, nv.hinhAnh );
                 suaNhanVien.ShowDialog();
             }
         }

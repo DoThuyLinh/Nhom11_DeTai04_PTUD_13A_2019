@@ -24,7 +24,7 @@ namespace GUI
             eHopDong = new eHopDong();
             busDuAn = new BUSDuAn();
         }
-        public frm_suaHopDong(string maHopDong, string maDuAn, string tenHopDong, DateTime ngayKyKet, DateTime ngayHetHan, double giaTriHopDong, string thongTin)
+        public frm_suaHopDong(string maHopDong, eDuAn duAn, string tenHopDong, DateTime ngayKyKet, DateTime ngayHetHan, double giaTriHopDong, string thongTin)
         {
             InitializeComponent();
 
@@ -32,7 +32,7 @@ namespace GUI
             busHopDong = new BUSHopDong();
 
             eHopDong.maHopDong = maHopDong;
-            eHopDong.duAn.MaDuAn = maDuAn;
+            eHopDong.duAn = duAn;
             eHopDong.tenHopDong = tenHopDong;
             eHopDong.ngayKyKet = ngayKyKet;
             eHopDong.ngayHetHan = ngayHetHan;
@@ -107,11 +107,12 @@ namespace GUI
 
         bool CheckNgayKyKet()
         {
-            eDuAn duAn = busDuAn.GetItemByCondition(t => t.MaDuAn.Equals(eHopDong.duAn.MaDuAn));
-            if (dtmNgayKyKet.Value < duAn.NgayBatDau || dtmNgayKyKet.Value > DateTime.Now)
+            
+            
+            if (dtmNgayKyKet.Value < eHopDong.duAn.NgayBatDau || dtmNgayKyKet.Value > eHopDong.duAn.NgayKetThuc || dtmNgayKyKet.Value > DateTime.Now)
             {
 
-                errorProvider1.SetError(dtmNgayKyKet, "ngay Ky Ket > ngay Du An bat dau. Ngay Du An:" + duAn.NgayBatDau.ToShortDateString() + "\n" + "Ngay ky ket <= ngay hien tai");
+                errorProvider1.SetError(dtmNgayKyKet, "ngay Ky Ket Trong Khoang Thoi Gian Du An Hoat Dong, Nho Hon Ngay Hien Tai. Ngay Du An:" + eHopDong.duAn.NgayBatDau.ToLongDateString() + "-" + eHopDong.duAn.NgayKetThuc.ToLongDateString());
                 return false;
             }
             return true;
@@ -121,7 +122,7 @@ namespace GUI
         {
             if (!CheckNgayHetHan())
             {
-                dtmNgayKyKet.Focus();
+                dtmNgayHetHan.Focus();
 
             }
             else
@@ -132,7 +133,7 @@ namespace GUI
 
         bool CheckNgayHetHan()
         {
-            if (dtmNgayHetHan.Value < dtmNgayKyKet.Value)
+            if (dtmNgayHetHan.Value <= dtmNgayKyKet.Value)
             {
 
                 errorProvider1.SetError(dtmNgayHetHan, "ngay Het Han > ngay Ky Ket");

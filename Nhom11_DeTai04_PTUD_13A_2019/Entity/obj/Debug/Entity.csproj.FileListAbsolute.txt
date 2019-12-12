@@ -137,3 +137,16 @@ D:\TaNgocQuynh\PTUD\PTUD_ver2\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Enti
 D:\TaNgocQuynh\PTUD\PTUD_ver2\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.csproj.CopyComplete
 D:\TaNgocQuynh\PTUD\PTUD_ver2\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.dll
 D:\TaNgocQuynh\PTUD\PTUD_ver2\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.pdb
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Debug\Entity.dll
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Debug\Entity.pdb
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Debug\LinqToExcel.dll
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Debug\Remotion.Data.Linq.dll
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Debug\Remotion.dll
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Debug\Remotion.Interfaces.dll
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\bin\Debug\LinqToExcel.xml
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.csproj.ResolveComReference.cache
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.csproj.CopyComplete
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.dll
+D:\TaNgocQuynh\PTUD\PTUDver3\Nhom11_DeTai04_PTUD_13A_2019\Entity\obj\Debug\Entity.pdb

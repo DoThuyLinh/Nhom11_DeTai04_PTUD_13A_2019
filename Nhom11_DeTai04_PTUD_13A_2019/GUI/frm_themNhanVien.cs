@@ -82,7 +82,7 @@ namespace GUI
 
         private void txtTienCongMotNgay_Leave(object sender, EventArgs e)
         {
-            if (checkTienCongMotNgay() == false)
+            if (CheckTienCongMotNgay() == false)
             {
                
                 txtTienCongMotNgay.Focus();
@@ -94,9 +94,9 @@ namespace GUI
             }
         }
 
-        bool checkTienCongMotNgay()
+        bool CheckTienCongMotNgay()
         {
-            if (Regex.IsMatch(txtTienCongMotNgay.Text, @"\d") == false)
+            if (Regex.IsMatch(txtTienCongMotNgay.Text, @"^\d+$") == false)
             {
                 errorProvider1.SetError(txtTienCongMotNgay, "Khong de trong, khong nhap chu");
 
@@ -107,7 +107,7 @@ namespace GUI
 
         private void txtTenNhanVien_Leave(object sender, EventArgs e)
         {
-            if (checkTenNhanVien() == false)
+            if (CheckTenNhanVien() == false)
             {
                 txtEmail.Focus();
                
@@ -118,7 +118,7 @@ namespace GUI
             }
         }
 
-        bool checkTenNhanVien()
+        bool CheckTenNhanVien()
         {
             if (txtTenNhanVien.Text.Trim().Equals(""))
             {
@@ -132,7 +132,7 @@ namespace GUI
         {
            
 
-            if (checkNamSinh() == false)
+            if (CheckNamSinh() == false)
             {
                 dtmNamSinh.Focus();
             }
@@ -142,7 +142,7 @@ namespace GUI
             }
         }
 
-        bool checkNamSinh()
+        bool CheckNamSinh()
         {
             DateTime hientai = DateTime.Now;
 
@@ -161,7 +161,7 @@ namespace GUI
         {
            
 
-            if (checkNgayVaoLam() == false)
+            if (CheckNgayVaoLam() == false)
             {
                 dtmNgayVaoLam.Focus();
                 
@@ -173,7 +173,7 @@ namespace GUI
 
         }
 
-        bool checkNgayVaoLam()
+        bool CheckNgayVaoLam()
         {
             DateTime hientai = DateTime.Now;
 
@@ -188,7 +188,7 @@ namespace GUI
 
         private void txtSoDienThoai_Leave(object sender, EventArgs e)
         {
-            if (!checkSDT())
+            if (!CheckSDT())
             {
 
                 txtSoDienThoai.Focus();
@@ -201,10 +201,10 @@ namespace GUI
             }
         }
 
-        bool checkSDT()
+        bool CheckSDT()
         {
 
-            if (Regex.IsMatch(txtSoDienThoai.Text, @"\d{10,12}") == false)
+            if (Regex.IsMatch(txtSoDienThoai.Text, @"^\d{10,12}$") == false)
             {
 
               
@@ -217,7 +217,7 @@ namespace GUI
 
         private void txtEMail_Leave(object sender, EventArgs e)
         {
-            if (!checkEmail())
+            if (!CheckEmail())
             {
                 txtEmail.Focus();
             
@@ -228,9 +228,9 @@ namespace GUI
             }
         }
 
-        bool checkEmail()
+        bool CheckEmail()
         {
-            if (!Regex.IsMatch(txtEmail.Text, @"\w@\w"))
+            if (!Regex.IsMatch(txtEmail.Text, @"^\w+(\.\w+)*@\w+(\.\w+)*$"))
             {
                
                 errorProvider1.SetError(txtEmail, "email khong hop le. Mau: abc@gmail.com hoac abc@yahoo.com.vn");
@@ -241,7 +241,7 @@ namespace GUI
 
         private void txtCMND_Leave(object sender, EventArgs e)
         {
-            if (!checkCMND())
+            if (!CheckCMND())
             {
                 txtCMND.Focus();
              
@@ -252,12 +252,12 @@ namespace GUI
             }
         }
 
-        bool checkCMND()
+        bool CheckCMND()
         {
-            if (!Regex.IsMatch(txtCMND.Text, @"\d"))
+            if (!Regex.IsMatch(txtCMND.Text,  @"^\d{2,3}-\d{2,3}-\d{4,5}$"))
             {
 
-                errorProvider1.SetError(txtCMND, "Khong de trong CMND");
+                errorProvider1.SetError(txtCMND, "Khong de trong CMND, mau 333-56-8888");
                 return false;
             }
             return true;
@@ -265,7 +265,7 @@ namespace GUI
 
         private void txtBHXH_Leave(object sender, EventArgs e)
         {
-            if (!checkBHXH())
+            if (!CheckBHXH())
             {
                 txtBHXH.Focus();
                 
@@ -276,12 +276,12 @@ namespace GUI
             }
         }
 
-        bool checkBHXH()
+        bool CheckBHXH()
         {
-            if (!Regex.IsMatch(txtBHXH.Text, @"^\d$"))
+            if (!Regex.IsMatch(txtBHXH.Text, @"^\d{10}$"))
             {
 
-                errorProvider1.SetError(txtBHXH, "Khong de trong BHXH");
+                errorProvider1.SetError(txtBHXH, "Khong de trong BHXH, 10 so");
                 return false;
             }
             return true;
@@ -289,7 +289,7 @@ namespace GUI
 
         private void txtSoNha_Leave(object sender, EventArgs e)
         {
-            if (!checkSoNha())
+            if (!CheckSoNha())
             {
                 txtSoNha.Focus();
          
@@ -300,7 +300,7 @@ namespace GUI
             }
         }
 
-        bool checkSoNha()
+        bool CheckSoNha()
         {
             if (txtSoNha.Text.Trim().Equals(""))
             {
@@ -316,7 +316,7 @@ namespace GUI
             // open file dialog   
             OpenFileDialog open = new OpenFileDialog();
             // image filters  
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            open.Filter = "Image Files(*.jpg; *.png*)|*.jpg; *.png*";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // display image in picture box  
@@ -337,39 +337,39 @@ namespace GUI
         {
             int soLoi = 0;
 
-            if (!checkTienCongMotNgay())
+            if (!CheckTienCongMotNgay())
             {
                 soLoi ++;
             }
-            if (!checkTenNhanVien())
+            if (!CheckTenNhanVien())
             {
                 soLoi++;
             }
 
-            if (!checkNamSinh())
+            if (!CheckNamSinh())
             {
                 soLoi++;
             }
-            if (!checkCMND())
+            if (!CheckCMND())
             {
                 soLoi++;
             }
 
-            if (!checkBHXH())
+            if (!CheckBHXH())
             {
                 soLoi++;
             }
-            if (!checkSDT())
+            if (!CheckSDT())
             {
                 soLoi++;
             }
             
-            if(!checkSoNha())
+            if(!CheckSoNha())
             {
                 soLoi++;
             }
 
-            if (!checkNgayVaoLam())
+            if (!CheckNgayVaoLam())
             {
                 soLoi++;
             }
@@ -394,6 +394,9 @@ namespace GUI
             eNhanVien.tienCongMotNgay = double.Parse(txtTienCongMotNgay.Text);
             eNhanVien.email = txtTenNhanVien.Text;
             eNhanVien.viTriCongViec = cboViTriCongViec.Text;
+            if(picImage.Text.Trim().Equals(""))
+                eNhanVien.hinhAnh = "macDinh.jpg";
+            else
             eNhanVien.hinhAnh = picImage.Text;
 
             busNhanVien.AddItem(eNhanVien);

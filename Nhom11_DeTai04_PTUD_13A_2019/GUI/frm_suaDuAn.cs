@@ -94,13 +94,13 @@ namespace GUI
 
 
             txtMaDuAn.Text = eDuAn.MaDuAn;
-            txtTenDuAn.Text = eDuAn.TenDuAn;
+            txtSoNha1.Text = eDuAn.TenDuAn;
             dtmNgayBatDau.Value = eDuAn.NgayBatDau;
             dtmNgayKetThuc.Value = eDuAn.NgayKetThuc;
             cboTrangThai.Text = eDuAn.TrangThai;
             nudTienDoHoanThanh.Value = eDuAn.TienDo;
 
-            txtSoNha.Text = eDuAn.DiaChi.soNha;
+            txtTenDuAn.Text = eDuAn.DiaChi.soNha;
             cboThanhPho.Text = eDuAn.DiaChi.thanhPho;
             cboQuanHuyen.Text = eDuAn.DiaChi.quanHuyen;
             cboPhuongXa.Text = eDuAn.DiaChi.phuongXa;
@@ -132,21 +132,21 @@ namespace GUI
 
             if (!CheckTenDuAn())
             {
-                txtTenDuAn.Focus();
+                txtSoNha1.Focus();
 
             }
             else
             {
-                errorProvider1.SetError(txtTenDuAn, "");
+                errorProvider1.SetError(txtSoNha1, "");
             }
         }
 
         bool CheckTenDuAn()
         {
-            if (txtTenDuAn.Text.Trim().Equals(""))
+            if (txtSoNha1.Text.Trim().Equals(""))
             {
 
-                errorProvider1.SetError(txtTenDuAn, "Khong de trong ten du an");
+                errorProvider1.SetError(txtSoNha1, "Khong de trong ten du an");
                 return false;
             }
             return true;
@@ -206,21 +206,21 @@ namespace GUI
         {
             if (!CheckSoNha())
             {
-                txtSoNha.Focus();
+                txtTenDuAn.Focus();
 
             }
             else
             {
-                errorProvider1.SetError(txtSoNha, "");
+                errorProvider1.SetError(txtTenDuAn, "");
             }
         }
 
         bool CheckSoNha()
         {
-            if (txtSoNha.Text.Trim().Equals(""))
+            if (txtTenDuAn.Text.Trim().Equals(""))
             {
 
-                errorProvider1.SetError(txtSoNha, "Khong de trong so nha");
+                errorProvider1.SetError(txtTenDuAn, "Khong de trong so nha");
                 return false;
             }
             return true;
@@ -240,18 +240,18 @@ namespace GUI
 
             if (soLoi > 0)
             {
-                txtTenDuAn.Focus();
+                txtSoNha1.Focus();
                 MessageBox.Show("Thong Tin Khong Hop Le");
                 return;
             }
 
-            eDuAn.TenDuAn = txtTenDuAn.Text;
+            eDuAn.TenDuAn = txtSoNha1.Text;
             eDuAn.NgayBatDau = dtmNgayBatDau.Value;
             eDuAn.NgayKetThuc = dtmNgayKetThuc.Value;
             eDuAn.TrangThai = cboTrangThai.Text;
             eDuAn.TienDo = (int)nudTienDoHoanThanh.Value;
 
-            eDuAn.DiaChi.soNha = txtSoNha.Text;
+            eDuAn.DiaChi.soNha = txtTenDuAn.Text;
             eDuAn.DiaChi.thanhPho = cboThanhPho.Text;
             eDuAn.DiaChi.quanHuyen = cboQuanHuyen.Text;
             eDuAn.DiaChi.phuongXa = cboPhuongXa.Text;
